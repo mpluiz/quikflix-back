@@ -35,6 +35,13 @@
 ```
   $ composer install
 ```
+- Env configuraation
+```
+  $ cp .env-example .env
+  $ php artisan key:generate
+```
+- Directory Permissions
+    > After installing Laravel, you may need to configure some permissions. Directories within the storage and the bootstrap/cache directories should be writable by your web server or Laravel will not run. 
 - To start server:
 ```
   $ php artisan serve
