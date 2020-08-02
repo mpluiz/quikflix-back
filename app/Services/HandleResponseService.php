@@ -9,7 +9,7 @@ class HandleResponseService implements HandleResponseInterface
     public function handle($response) {
         if ($response->successful()) {
             $response = json_decode($response->body());
-        } else if ($response->failed() || $response->clientError() || $response->serverError()) {
+        } else if ($response->serverError()) {
              return $response->throw();
         }
 
