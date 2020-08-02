@@ -12,4 +12,7 @@ Route::group(['prefix'=> $version], function () {
     Route::group(['prefix' => 'genre'], function () {
         Route::get('movie/list',   'GenresController@getGenresList');
     });
+    Route::group(['prefix' => 'movie'], function () {
+        Route::get('{id}',   'MovieController@getDetails');
+    });
 });
