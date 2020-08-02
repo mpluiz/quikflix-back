@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $servicesPath = "App\Services";
+        $contractsPath = "App\Contracts";
+
+        $this->app->bind("{$contractsPath}\HandleResponseInterface",    "{$servicesPath}\HandleResponseService");
     }
 
     /**
