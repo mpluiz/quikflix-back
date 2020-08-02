@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
         $servicesPath = "App\Services";
         $contractsPath = "App\Contracts";
 
+        $this->app->bind("{$contractsPath}\TrendingInterface",          "{$servicesPath}\TrendingService");
         $this->app->bind("{$contractsPath}\HandleResponseInterface",    "{$servicesPath}\HandleResponseService");
     }
 
