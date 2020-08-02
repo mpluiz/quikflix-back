@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind("{$contractsPath}\GenresInterface",            "{$servicesPath}\GenresService");
         $this->app->bind("{$contractsPath}\MovieInterface",             "{$servicesPath}\MovieService");
         $this->app->bind("{$contractsPath}\SearchInterface",            "{$servicesPath}\SearchService");
+        $this->app->bind("{$contractsPath}\DiscoverInterface",          "{$servicesPath}\DiscoverService");
     }
 
     /**
